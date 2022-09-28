@@ -1,3 +1,4 @@
+
 *{
     margin: 0px;
     padding: 0px;
@@ -321,3 +322,84 @@ nav input{
   font-size: 45px;
   font-weight: 600;
 }
+#container2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#brands_you_cant_miss{
+    width: 60%;
+    margin: auto;
+}
+
+.products{
+    width: 100%;
+    margin: auto;
+    margin-top: -15px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+}
+.cards>img{
+    width: 100%;
+    border-radius: 5px;
+}
+.cards>h4{
+    margin-top: 0px;
+}
+.cards>p{
+    margin-top: -20px;
+}
+#influencers_festive_favourites>h3{
+    text-align: center;
+}
+#influencers{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: center;
+}
+.cards>h5{
+    margin-top: 0px;
+}
+#section2{
+    background-color: whitesmoke;
+    padding-left: 27%;
+    padding-right: 27%;
+    text-align: center;
+    
+}
+#buying_guides{
+    text-align: center;
+    border: 1px solid;
+}
+#sliding_guide{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+}
+#sliding_guide>img{
+    width: 100%;
+}
+#ec{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin: auto;
+}
+#ec>img{
+    width: 100%;
+}
+#gift_card{
+    margin: auto;
+    /* border: 1px solid; */
+}
+#gift_card>:nth-child(2){
+    width: 50%;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+#gift_card>:nth-child(3){
+    width: 100%;
+}
+
