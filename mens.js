@@ -70,6 +70,7 @@ const appendCategories = (data) => {
 }
 appendCategories(topCategories);
 
+const carts = JSON.parse(localStorage.getItem("cart"))||[];
 const appendBest = (data) => {
     let best_seller = document.querySelector('#best_seller');
 
@@ -92,6 +93,10 @@ const appendBest = (data) => {
 
         let btn = document.createElement('button');
         btn.innerHTML = 'Add to cart';
+        btn.addEventListener("click",function(){
+            carts.push(el)
+            localStorage.setItem("cart",JSON.stringify(carts))
+        })
 
         div.append(image,title,ratings,price,btn)
         best_seller.append(div);
