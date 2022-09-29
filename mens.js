@@ -136,6 +136,13 @@ const appendBudget = (data) => {
 
         let div = document.createElement('div');
         div.className = 'budget'
+        div.addEventListener('click',()=>{
+            // console.log('div:', div)
+            // // console.log
+            window.location.href="facewash.html"
+        })
+
+
         let image = document.createElement('img');
         image.src = el.url;
 
@@ -274,4 +281,5 @@ const app =(brands)=>{
     });
 }
 app(brands)
+
 
