@@ -1,3 +1,6 @@
+import {footer} from "/components/footer.js"
+document.querySelector("#footer").innerHTML = footer();
+
 let img_arr = [
     {"url" : "https://images-static.nykaa.com/uploads/a261ed0b-bb88-404e-b423-b40072fb814c.jpg?tr=w-600,cm-pad_resize" },
     {"url" : "https://images-static.nykaa.com/uploads/1ca076b5-bb28-42e1-8c90-518afdb5d385.jpg?tr=w-1200,cm-pad_resize"},
