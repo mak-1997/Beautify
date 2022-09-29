@@ -13,6 +13,9 @@
 #inner{
     background: rgb(229,139,86);
     background: linear-gradient(90deg, rgba(229,139,86,1) 0%, rgba(226,99,114,1) 52%, rgba(228,122,86,1) 100%);
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 #sec1 {
     width: 35%; 
@@ -51,12 +54,39 @@ marquee:hover {
     cursor: pointer;
 }
 .fa-solid {
-    color: #3b050c;
+    color: #ffffff;
     font-size: 14px;
     margin-right: 3px;
 }
+.fa-regular {
+  color: #ffffff;
+}
 .fa-solid:hover {
     color: #ffffff;
+}
+#nav {
+  position: sticky;
+  z-index: 99;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#ac {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-around;
+  margin-left: 250px;
+}
+.fa-bag-shopping {
+  font-size: 18px;
+  color: #fc2779;
+  cursor: pointer;
+}
+.fa-bag-shopping:hover {
+  color: #fc2779;
+}
+#cr {
+  margin-left: 15px;
 }
 #logo {
   display: flex;
@@ -67,8 +97,7 @@ marquee:hover {
     width: 65%;
 }
 nav{
-  z-index: 99;
-  width: 85%;
+  width: 75%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -81,12 +110,15 @@ nav .wrapper{
   margin: auto;
   display: flex;
   align-items: center;
+  z-index: 99;
+  
 }
 .wrapper .nav-links{
   display: inline-flex;
 }
 .nav-links li{
   list-style: none;
+
 }
 .nav-links li a{
   color: #1f1f1f;
@@ -102,6 +134,7 @@ nav .wrapper{
 }
 .nav-links .mobile-item{
   display: none;
+  
 }
 .nav-links .drop-menu{
   position: absolute;
@@ -112,20 +145,15 @@ nav .wrapper{
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  
 }
 .nav-links li:hover .drop-menu,
 .nav-links li:hover .mega-box{
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   top: 70px;
-  opacity: 1;
+  opacity: 10;
   visibility: visible;
-}
-.drop-menu li a{
-  width: 100%;
-  display: block;
-  padding: 0 0 0 15px;
-  font-weight: 400;
-  border-radius: 0px;
+  background-color: white;
 }
 .mega-box{
   position: absolute;
@@ -135,23 +163,20 @@ nav .wrapper{
   top: 85px;
   opacity: 0;
   visibility: hidden;
+  z-index: 999;
 }
 .mega-box .content{
   color: #1f1f1f;
   padding: 25px 20px;
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: 85%;
+  justify-content: space-evenly;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  z-index: 999;
 }
 .mega-box .content .row{
   width: calc(25% - 30px);
   line-height: 25px;
-}
-.content .row img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .content .row header{
   color: #1f1f1f;
@@ -349,7 +374,6 @@ nav input{
     margin-top: 0px;
 }
 .cards>p{
-  /* padding-top: 25px; */
   padding-bottom: 25px;
 }
 #influencers_festive_favourites>h3{
