@@ -1,0 +1,56 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: whitesmoke;
+}
+#cart{
+    margin-top: 20px;
+}
+#list{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    font-size: 20px;
+    line-height: 20px;
+}
+#list > div >img{
+    width: 80%;
+}
+
+#list > div{
+  width: 100%;
+  background-color: white;
+}
+
+#flex{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    background-color: lightblue;
+}
+
+.flex_class{
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+}
+
+#btn_proceed{
+    text-align:center;
+  
+}
+#btn_proceed > button{
+    border-radius: 10px;
+    width: 10%;
+    height: 50px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.555);
+    font-size: 20px;
+    border: none;
+}
+
+#btn_proceed > button:hover{
+    background-color: red;
+}
