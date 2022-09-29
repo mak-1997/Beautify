@@ -1,11 +1,11 @@
+
+import {footer} from "/components/footer.js"
 import {inner,navbar} from "/components/navbar.js"
+document.querySelector("#footer").innerHTML = footer();
+
+
 document.querySelector("#inner").innerHTML = inner();
 document.querySelector("#nav").innerHTML = navbar();
-
-
-
-
-
 
 
 let img_arr = [

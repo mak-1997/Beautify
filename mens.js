@@ -1,6 +1,11 @@
+
+import {footer} from "./components/footer.js"
 import {inner,navbar} from "./components/navbar.js"
+document.querySelector("#footer").innerHTML = footer();
+
+
 document.querySelector("#inner").innerHTML = inner();
-document.querySelector("#nav").innerHTML = navbar();
+document.querySelector("#nav").innerHTML = navbar()
 
 let topCategories = [
     { url: 'https://images-static.nykaa.com/uploads/c4ebdb12-7b5c-456f-a64a-cb05cad5ebea.png?tr=w-200,cm-pad_resize' },
