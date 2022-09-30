@@ -15,8 +15,8 @@ let footer = () =>{
                 <p>FOR ANY HELP YOU MAY CALL US AT 188-267-4444</p>
             </div>
             <div id="top4">
-                <input type="text" placeholder="Your Email" >
-                <button>SEND</button>
+                <input type="text" placeholder="Your Email" id="email_input">
+                <button id="alert_btn">SEND</button>
             </div>
             <div id="top5"> 
                 <img src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="">

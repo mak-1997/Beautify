@@ -1,5 +1,6 @@
 import {inner,navbar} from "../components/navbar.js"
 import {footer} from "../components/footer.js"
+import {show_alert} from "./alert.js"
 
 document.querySelector("#footer").innerHTML = footer();
 // document.getElementById("items_count").innerText = `₹ ${total}`;
@@ -35,11 +36,16 @@ let start_slide_show = (event,img_arr) =>{
     let i = 0;
     img1.src = img_arr[i].url;
     i++;
+    if(i == img_arr.length){
+        i = 0;
+    }
     slide_div.append(img1);
     img2.src = img_arr[i].url;
     i++;
+   
     slide_div.append(img2);
-    let start = setInterval(() => {
+    let starts = setInterval(() => {
+        console.log("my",i)
         if(i == img_arr.length){
             i = 0;
         }
@@ -71,25 +77,22 @@ let hero_arr = [
     "https://images-static.nykaa.com/uploads/18d88d0a-e591-45ce-a9e1-e12054baac28.jpg?tr=w-1200,cm-pad_resize"
 ];
 
-let k=0;
+let j=0;
 let div = document.getElementById("hSlider");
 let picture = document.createElement("img");
-picture.src = hero_arr[0];
+picture.src = hero_arr[j];
 
 div.append(picture)
-k = k + 1;
-if( k == 7) {
-    k = 0
-}
+j++;
+if(j==7)    j=0;
 setInterval(function () {
-    if( k == 7) {
-        k = 0
-    }
-   
-    k++;
-    picture.src = hero_arr[k];
+    picture.src = hero_arr[j];
     div.append(picture)
-
+    if( j == 7) {
+        j = 0
+        j++;
+    }
+    // console.log(j)
 },2000)
 
 }
@@ -191,21 +194,66 @@ appendnykaaTrending(trendArr);
 
 
 let bestsellers = [
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/c/d/cd037fb773602040605_0.jpg",title: 'NIVEA Men Face Wash, Dark Spot Reduction',ratings:4.0,price:110},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/9/8904330900707_1.jpg",title: 'Beardo De-Tan Bodywash For Men' ,ratings:4.8,price:250},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/2/320deadMINIM00000008_1n.jpg",title: 'Ustraa Beard Growth Oil with Redensyl' ,ratings:4.2,price:399},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/7/a72310aestee00000043_1.jpg",title: 'Gillette Mach 3 Shaving Razor',ratings:4.1,price:385},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/3/333efedNYKAC00000370_1.jpg",title: 'Jaguar Classic Black Eau De Toilette' ,ratings:4.2,price:3300},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/d/3d232868901526403868_1.jpg",title: 'Versace Pour Homme Dylan Blue',ratings:4.4 ,price:3350},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",title: 'Ustraa Hair Growth Vitalizer , Jojoba Oil' ,ratings:4.0,price:699},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/7/7/774617eVICTO00000017-1.jpg", title: 'Optimum Nutrition (ON) Gold Standard 100% Whey' ,ratings:4.1,price:3899},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/9/2/925e4d14005808427048_1.jpg",title: 'Philips BT1232/15 Skin-friendly Beard Trimmer',ratings:4.3,price:945},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/m/i/mini5.jpg", title: 'Neutrogena UltraSheer Dry Touch Sunblock SPF 50+' ,ratings:4.6,price:675},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/6/a6bf37c8906087770671aw__1_.jpg",title: 'Nykaa Wanderlust Shower Gel - Activated Charcoal' ,ratings:4.7,price:350},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/0/8005610639161_8_1.jpg", title: 'The Man Company Argan & Geranium Beard Oil' ,ratings:4.0,price:350},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/2/b/2b220b2885190822126_text.jpg",title: 'Bombay Shaving Company Charcoal Shaving Foam' ,ratings:4.5,price:245},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/4/2/425c7038411061819838_1.jpg", title: 'Tom Ford Ombre Leather la Perfume' ,ratings:4.9,price:8500},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/e/ae303ddDYSON00000036_1.jpg", title: 'Gucci Guilty Perfume Pour Home For Him',ratings:4.7,price:11650 }
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/c/d/cd037fb773602040605_0.jpg",
+    title: 'M A C Retro Matte Lipstick' ,
+    ratings:4.0,
+    price:110},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/9/8904330900707_1.jpg",
+    title: 'Kay Beauty Matte Blush',
+    ratings:4.8,
+    price:250},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/2/320deadMINIM00000008_1n.jpg",
+    title: 'Minimalist 10% Vitamin C Serum For' ,
+    ratings:4.2,
+    price:399},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/7/a72310aestee00000043_1.jpg",
+    title: 'Estee Lauder Advanced Nigh Repair Synchronized Multi Recovery Complex' ,
+    ratings:4.1,
+    price:385},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/3/333efedNYKAC00000370_1.jpg",
+    title: 'Nykaa Cosmetics Eyes On Me! 4 In 1 Quad Eyeshadow',
+    ratings:4.2,
+    price:3300},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/d/3d232868901526403868_1.jpg",
+    title: 'Loreal professionel X- Tenso Care Pro-Keratine +' ,
+    ratings:4.4 
+    ,price:3350},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",
+    title: 'Dot & Key Vitamin C + E Super  Bright Moisturizer' ,
+    ratings:4.0,
+    price:699},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/7/7/774617eVICTO00000017-1.jpg", 
+    title: 'Carolina Herrera Good Girl Eau de Parfum', 
+    ratings:4.1,
+    price:3899},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/9/2/925e4d14005808427048_1.jpg",
+    title: 'NIVEA Body Lotion, Extra Whitening Cell Repair, SPF' ,
+    ratings:4.3,
+    price:945},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/m/i/mini5.jpg", 
+    title: `Keihl's Ultra Facial Cream With Glacial Glycoprotein` ,
+    ratings:4.6,
+    price:675},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/6/a6bf37c8906087770671aw__1_.jpg",
+    title: 'Mamaearth Ubtan Facwe Wash With Turmeric &' ,
+    ratings:4.7,
+    price:350},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/0/8005610639161_8_1.jpg",
+    title: 'Wella Professionals INVIGO Nutri Enrich Deep',
+    ratings:4.0,
+    price:350},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/2/b/2b220b2885190822126_text.jpg",
+    title: 'PIXI DetoxifEYE Depuffing Under-Eye Patches',
+    ratings:4.5,
+    price:245},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/4/2/425c7038411061819838_1.jpg", 
+    title: 'Carolina Herrera Good Girl Eau de Parfum',
+    ratings:4.9,
+    price:8500},
+    {url : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/e/ae303ddDYSON00000036_1.jpg",
+    title: 'Dyson Airwarp Multi-Styler Nickel-Copper', 
+    ratings:4.7,
+    price:11650 }
 ];
 
 
@@ -254,4 +302,10 @@ document.getElementById("goGift").addEventListener("click",
 function () {
     console.log("check")
     window.location.href = "gift.html"
+})
+
+// -----------------Footer Email Input------------------------
+
+document.querySelector("#alert_btn").addEventListener("click", () => {
+    show_alert();
 })
