@@ -298,6 +298,12 @@ const appendBest = (data) => {
 appendBest(bestsellers);
 
 
+document.getElementById("goGift").addEventListener("click",
+function () {
+    console.log("check")
+    window.location.href = "gift.html"
+})
+
 // -----------------Footer Email Input------------------------
 
 document.querySelector("#alert_btn").addEventListener("click", () => {

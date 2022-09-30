@@ -1,0 +1,75 @@
+#section1 {
+    height: 200px;
+    margin-top: 100px;
+    background-image: url('https://www.nykaa.com/assets/desktop/images/gift_card/nykaa-gc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#voucherTab {
+    width: 75%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f3f3f3;
+}
+#voucherTab > div {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #1f1f1f;
+}
+#voucherTab > div:nth-child(1){
+    color: #fc2779;
+}
+#voucherTab > div:hover {
+    color: #fc2779;
+}
+#voucherCards {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    gap: 85px;
+    margin-bottom: 50px;
+    padding: 50px;
+
+}
+
+#voucherCards > div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#voucherCards > div > img + div {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 10px;
+}
+
+#voucherCards > div > button {
+    padding: 10px 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 100%;
+    background-color: #fc2779;
+    border: 1px solid #fc2779;
+    cursor: pointer;
+    transition: ease;
+}
+
+#voucherCards > div > button:hover {
+    scale: 1.01;
+}
+
+#dashed {
+    border: 1px dashed #1f1f1f;
+    width: 40%;
+    text-align: center;
+
+}
