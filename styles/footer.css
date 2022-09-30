@@ -33,17 +33,18 @@
     font-size: 22px;
   }
   #top4 > input {
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    border: none;
     border-bottom: 2px solid white;
     background-color: #3f413f;
     padding-bottom: 5px;
     padding-left: 5px;
     color: white;
+    outline: none;
   }
+  
   ::placeholder {
     color: white;
+    font-style: italic;
   }
   #top4 > button {
     background-color: #3f413f;
