@@ -1,0 +1,55 @@
+#address{
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 70%;
+}
+
+#address_card{
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 70%;
+}
+
+#address_form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+#address_form > input{
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    font-size: 20px; 
+    padding-left: 10px; 
+}
+
+#address_form > input::placeholder{
+    color: rgba(0, 0, 0, 0.253)
+}
+
+#submit_payment{
+text-align:center;
+margin:20px 0px 40px 0px;
+}
+
+#submit_payment > button{
+border-radius: 10px;
+width: 10%;
+height: 50px;
+color: white;
+background-color: lightblue;
+font-size: 20px;
+border: none;
+}
+
+#submit_payment > button:hover{
+background-color: rgb(47, 175, 218);
+}
+

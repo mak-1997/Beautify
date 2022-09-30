@@ -19,6 +19,18 @@ body{
     width: 60%;
 }
 
+#btn_apply{
+    width: 35%;
+    height: 40px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.555);
+    border-radius: 10px;
+    border: none;
+}
+#btn_apply:hover{
+    background-color: red;
+}
+
 #list > div{
   width: 50%;
   display: flex;
@@ -43,12 +55,16 @@ body{
     
 }
 
+.flex_class > h4{
+    margin-top: 15px;
+}
+
 button{
     width: 25%;
     margin-top: 10px;
 }
 
-p{
+#cart > p{
     margin-top: 10px;
     font-size: 1.25rem;
     font-weight: 500;
@@ -62,7 +78,7 @@ a{
 
 .flex_class{
     display: flex;
-    width: 25%;
+    width: 30%;
     justify-content: space-around;
 }
 
