@@ -1,6 +1,7 @@
 
 import {footer} from "./components/footer.js"
 import {inner,navbar} from "./components/navbar.js"
+import {show_alert} from "./scripts/alert.js"
 document.querySelector("#footer").innerHTML = footer();
 
 
@@ -293,3 +294,8 @@ const app =(brands)=>{
 app(brands)
 
 
+// -----------------Footer Email Input------------------------
+
+document.querySelector("#alert_btn").addEventListener("click", () => {
+    show_alert();
+})

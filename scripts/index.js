@@ -1,5 +1,6 @@
 import {inner,navbar} from "../components/navbar.js"
 import {footer} from "../components/footer.js"
+import {show_alert} from "./alert.js"
 
 document.querySelector("#footer").innerHTML = footer();
 // document.getElementById("items_count").innerText = `₹ ${total}`;
@@ -246,3 +247,8 @@ const appendBest = (data) => {
 appendBest(bestsellers);
 
 
+// -----------------Footer Email Input------------------------
+
+document.querySelector("#alert_btn").addEventListener("click", () => {
+    show_alert();
+})
