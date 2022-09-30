@@ -71,19 +71,23 @@ let hero_arr = [
     "https://images-static.nykaa.com/uploads/18d88d0a-e591-45ce-a9e1-e12054baac28.jpg?tr=w-1200,cm-pad_resize"
 ];
 
-let i=0;
+let k=0;
 let div = document.getElementById("hSlider");
 let picture = document.createElement("img");
 picture.src = hero_arr[0];
 
 div.append(picture)
-i = i + 1;
-
+k = k + 1;
+if( k == 7) {
+    k = 0
+}
 setInterval(function () {
-    if( i == 7) {
-        i = 0
+    if( k == 7) {
+        k = 0
     }
-    picture.src = hero_arr[i];
+   
+    k++;
+    picture.src = hero_arr[k];
     div.append(picture)
 
 },2000)
@@ -246,3 +250,8 @@ const appendBest = (data) => {
 appendBest(bestsellers);
 
 
+document.getElementById("goGift").addEventListener("click",
+function () {
+    console.log("check")
+    window.location.href = "gift.html"
+})

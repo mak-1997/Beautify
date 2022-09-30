@@ -14,7 +14,7 @@ const inner = () => {
         </div>
         <div>
             <i class="fa-regular fa-credit-card"></i>
-            <h4>Gift Card |</h4>
+            <h4 id="goGift">Gift Card |</h4>
         </div>
         <div>
             <i class="fa-solid fa-circle-question"></i>
