@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="shortcut icon" type="image/png" href="Nykaa-Beauty-Shopping-App.-Buy-Makeup-Cosmetics-APK-MOD-Premium-Download-2.5.9.png">
+    <title>Payment Page</title>
+</head>
+<body>
+    <div id="inner">      
+    </div>
+    <div id="nav"> 
+    </div>
+
+    <div id="address">
+        <h1>Delivery Address</h1>
+        <form id="address_form">
+            <input type="text" placeholder="Address line-1" required>
+            <input type="text" placeholder="Address line-2" required>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="State" required>
+            <input type="number" placeholder="Pin Code" required maxlength="6" minlength="6"> 
+        </form>
+    </div>
+    <div id="address_card">
+        <h1>Card Payment</h1>
+        <form id="address_form">
+            <input type="text" placeholder="card holder name" required >
+            <input type="text" placeholder="card number" required maxlength="16" minlength="12">
+            <input type="date" placeholder="expire date" required>
+            <input type="text" id="cvv" placeholder="cvv" required maxlength="3" minlength="3">
+        </form>
+    </div>
+    <div id="submit_payment">
+        <button id="submit">Submit</button>
+    </div>
+    <div id="footer">
+    </div>
+</body>
+</html>
+<script type="module" src="payment.js"></script>
