@@ -1,3 +1,13 @@
+import {footer} from "./components/footer.js"
+import {inner,navbar} from "./components/navbar.js"
+document.querySelector("#footer").innerHTML = footer();
+
+
+document.querySelector("#inner").innerHTML = inner();
+document.querySelector("#nav").innerHTML = navbar();
+
+
+
 let facewash = [
     {
         url: 'https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/0/d0ffde8mnardn428.jpg',
@@ -68,6 +78,8 @@ localStorage.setItem('facewashData', JSON.stringify(facewash))
 let dataFace = JSON.parse(localStorage.getItem('facewashData')) || [];
 let total=dataFace.length;
 // console.log('total:', total)
+let totalS = JSON.parse(localStorage.getItem("cart"))||[];
+document.getElementById("items_count").innerText = totalS.length;
 
 let showTotal=document.querySelector('.heading_facewashes');
 showTotal.innerHTML=`Facewash (${total})`
@@ -99,6 +111,8 @@ const appendFacewash = (data) => {
         btn.addEventListener('click',function(){
             carts.push(el);
             localStorage.setItem('cart',JSON.stringify(carts))
+            totalS = JSON.parse(localStorage.getItem("cart"))||[];
+            document.getElementById("items_count").innerText = totalS.length;
         })
 
         div.append(image, title, ratings, price, btn)

@@ -1,11 +1,18 @@
+import {inner,navbar} from "../components/navbar.js"
+import {footer} from "../components/footer.js"
 
-import {footer} from "/components/footer.js"
-import {inner,navbar} from "/components/navbar.js"
 document.querySelector("#footer").innerHTML = footer();
-
+// document.getElementById("items_count").innerText = `₹ ${total}`;
 
 document.querySelector("#inner").innerHTML = inner();
 document.querySelector("#nav").innerHTML = navbar();
+
+
+let totalS = JSON.parse(localStorage.getItem("cart"))||[];
+document.getElementById("items_count").innerText = totalS.length;
+
+   
+
 
 
 let img_arr = [
@@ -180,21 +187,21 @@ appendnykaaTrending(trendArr);
 
 
 let bestsellers = [
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/c/d/cd037fb773602040605_0.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/9/8904330900707_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/2/320deadMINIM00000008_1n.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/7/a72310aestee00000043_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/3/333efedNYKAC00000370_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/d/3d232868901526403868_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/7/7/774617eVICTO00000017-1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/9/2/925e4d14005808427048_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/m/i/mini5.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/6/a6bf37c8906087770671aw__1_.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/0/8005610639161_8_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/2/b/2b220b2885190822126_text.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/4/2/425c7038411061819838_1.jpg"},
-    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/e/ae303ddDYSON00000036_1.jpg"}
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/c/d/cd037fb773602040605_0.jpg",title: 'NIVEA Men Face Wash, Dark Spot Reduction',ratings:4.0,price:110},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/9/8904330900707_1.jpg",title: 'Beardo De-Tan Bodywash For Men' ,ratings:4.8,price:250},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/2/320deadMINIM00000008_1n.jpg",title: 'Ustraa Beard Growth Oil with Redensyl' ,ratings:4.2,price:399},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/7/a72310aestee00000043_1.jpg",title: 'Gillette Mach 3 Shaving Razor',ratings:4.1,price:385},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/3/333efedNYKAC00000370_1.jpg",title: 'Jaguar Classic Black Eau De Toilette' ,ratings:4.2,price:3300},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/3/d/3d232868901526403868_1.jpg",title: 'Versace Pour Homme Dylan Blue',ratings:4.4 ,price:3350},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",title: 'Ustraa Hair Growth Vitalizer , Jojoba Oil' ,ratings:4.0,price:699},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/7/7/774617eVICTO00000017-1.jpg", title: 'Optimum Nutrition (ON) Gold Standard 100% Whey' ,ratings:4.1,price:3899},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/9/2/925e4d14005808427048_1.jpg",title: 'Philips BT1232/15 Skin-friendly Beard Trimmer',ratings:4.3,price:945},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/m/i/mini5.jpg", title: 'Neutrogena UltraSheer Dry Touch Sunblock SPF 50+' ,ratings:4.6,price:675},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/6/a6bf37c8906087770671aw__1_.jpg",title: 'Nykaa Wanderlust Shower Gel - Activated Charcoal' ,ratings:4.7,price:350},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/0/8005610639161_8_1.jpg", title: 'The Man Company Argan & Geranium Beard Oil' ,ratings:4.0,price:350},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/2/b/2b220b2885190822126_text.jpg",title: 'Bombay Shaving Company Charcoal Shaving Foam' ,ratings:4.5,price:245},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/4/2/425c7038411061819838_1.jpg", title: 'Tom Ford Ombre Leather la Perfume' ,ratings:4.9,price:8500},
+    {"url" : "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/e/ae303ddDYSON00000036_1.jpg", title: 'Gucci Guilty Perfume Pour Home For Him',ratings:4.7,price:11650 }
 ];
 
 
@@ -202,7 +209,7 @@ let bestsellers = [
 
 
 
-
+const carts = JSON.parse(localStorage.getItem("cart"))||[];
 const appendBest = (data) => {
     let best_seller = document.querySelector('#best_seller');
 
@@ -225,9 +232,17 @@ const appendBest = (data) => {
 
         let btn = document.createElement('button');
         btn.innerHTML = 'Add to cart';
+        btn.addEventListener("click",function(){
+            carts.push(el)
+            localStorage.setItem("cart",JSON.stringify(carts))
+            totalS = JSON.parse(localStorage.getItem("cart"))||[];
+            document.getElementById("items_count").innerText = totalS.length;
+        })
 
         div.append(image,title,ratings,price,btn)
         best_seller.append(div);
     })
 }
 appendBest(bestsellers);
+
+

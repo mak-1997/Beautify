@@ -5,7 +5,13 @@ document.querySelector("#footer").innerHTML = footer();
 
 
 document.querySelector("#inner").innerHTML = inner();
-document.querySelector("#nav").innerHTML = navbar()
+document.querySelector("#nav").innerHTML = navbar();
+
+//total count
+// let totalS=0;
+let totalS = JSON.parse(localStorage.getItem("cart"))||[];
+document.getElementById("items_count").innerText = totalS.length;
+
 
 let topCategories = [
     { url: 'https://images-static.nykaa.com/uploads/c4ebdb12-7b5c-456f-a64a-cb05cad5ebea.png?tr=w-200,cm-pad_resize' },
@@ -104,7 +110,10 @@ const appendBest = (data) => {
         btn.addEventListener("click",function(){
             carts.push(el)
             localStorage.setItem("cart",JSON.stringify(carts))
+            totalS = JSON.parse(localStorage.getItem("cart"))||[];
+            document.getElementById("items_count").innerText = totalS.length;
         })
+
 
         div.append(image,title,ratings,price,btn)
         best_seller.append(div);
@@ -174,6 +183,7 @@ const appendLaunches = (data) => {
 }
 appendLaunches(new_Launches);
 
+let id;
 //sliding image function
 const slidewindow=()=>{
     let arr = ["https://images-static.nykaa.com/uploads/32fe6b48-b189-41eb-af0d-12d1edc08901.jpg?tr=w-1200,cm-pad_resize","https://images-static.nykaa.com/uploads/861b0948-8e08-42f9-98bf-529b37388b5d.jpg?tr=w-1200,cm-pad_resize","https://images-static.nykaa.com/uploads/be1eda0f-fd12-4830-91e0-ef92d7680c81.jpg?tr=w-1200,cm-pad_resize","https://images-static.nykaa.com/uploads/4b137c91-cd8b-4f15-8edd-bdeb97163970.jpg?tr=w-1200,cm-pad_resize","https://images-static.nykaa.com/uploads/1845d1c4-40a1-4b11-8501-5b54ce0e1303.jpg?tr=w-1200,cm-pad_resize","https://images-static.nykaa.com/uploads/c73b7deb-3151-4fe7-93f5-ed64592a6191.jpg?tr=w-1200,cm-pad_resize"]

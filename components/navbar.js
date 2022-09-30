@@ -27,7 +27,7 @@ const inner = () => {
 
 
 const navbar = () => {
-       
+
     return `<nav>
         <div class="wrapper">
             <div id="logo">
@@ -230,10 +230,16 @@ const navbar = () => {
             <h4>Account</h4>
         </div>
         <div id="cr">
-            <i class="fa-solid fa-bag-shopping"></i>
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span id="items_count">0</span></a>
+            
         </div>
     </nav>`
 }
 
 
-export {inner,navbar}
+
+
+
+
+
+export { inner, navbar }
