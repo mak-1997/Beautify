@@ -36,11 +36,16 @@ let start_slide_show = (event,img_arr) =>{
     let i = 0;
     img1.src = img_arr[i].url;
     i++;
+    if(i == img_arr.length){
+        i = 0;
+    }
     slide_div.append(img1);
     img2.src = img_arr[i].url;
     i++;
+   
     slide_div.append(img2);
-    let start = setInterval(() => {
+    let starts = setInterval(() => {
+        console.log("my",i)
         if(i == img_arr.length){
             i = 0;
         }
@@ -75,18 +80,19 @@ let hero_arr = [
 let i=0;
 let div = document.getElementById("hSlider");
 let picture = document.createElement("img");
-picture.src = hero_arr[0];
+picture.src = hero_arr[i];
 
 div.append(picture)
 i = i + 1;
-
+if(i==7)    i=0;
 setInterval(function () {
     if( i == 7) {
         i = 0
     }
+    i++;
     picture.src = hero_arr[i];
     div.append(picture)
-
+    // console.log(i)
 },2000)
 
 }
