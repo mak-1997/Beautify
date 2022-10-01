@@ -116,7 +116,7 @@ const appendFacewash = (data) => {
             document.getElementById("items_count").innerText = totalS.length;
         })
 
-        div.append(image, title, ratings, price, btn)
+        div.append(image, title, price, ratings, btn)
         facewashes.append(div);
     })
 }

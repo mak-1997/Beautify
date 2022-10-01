@@ -1,10 +1,24 @@
 #facewash_products{
     display: flex;
+    width: 95%;
+    margin: auto;
+    gap: 75px;
+    margin-top: 40px;
 } 
 
-#products_facewash{
+
+
+#pf_parent {
+    display: flex;
+    width: 100%;
+}
+
+#products_facewash {
+    
     display: grid;
-    grid-template-columns: repeat(3,33%);
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-bottom: 70px;
 }
 
 body{
@@ -14,20 +28,23 @@ body{
 }
 
 #sorting{
-    width:20%;
+    width: 22%;
+
    
 }
 
 #sorting>select{
-    margin-bottom: 50px;
-    margin-top: 20px;
-    padding: 20px;
-    margin-left: 20px;
-    font-size: larger;
-    width:92%;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
     background: linear-gradient( 90deg, rgba(229, 139, 86, 1) 0%, rgba(226, 99, 114, 1) 52%, rgba(228, 122, 86, 1) 100% );
     cursor: pointer;
     color:black;
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #sorting>select>option:hover{
@@ -36,27 +53,73 @@ body{
 
 .heading_facewash{
     text-align: center;
-    /* margin-bottom: 30px; */
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
 }
 
 .heading_facewashes{
     text-align: center;
     margin-bottom: 10px;
     margin-top: 80px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
 }
 
 .facewash{
-    margin:20px;
     text-align: center;
+    padding: 20px;
     font-weight: 500;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.facewash>button{
-    margin-bottom: 20px;
-    width: 80%;
-    padding: 10px;
+.facewash > img {
+    width: 85%;
+}
+
+.facewash > img + p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #001325;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.facewash > img + p + p + p {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+
+}
+
+.facewash > img + p + p  {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+}
+
+.facewash > button{
+    margin-top: 10px;
+    width: 70%;
+    padding: 7px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
     text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.facewash > button:hover {
+    background-color: #fc2779;
+    border: 1px solid #fc2779;
+    color: white;
+    scale: 1.03;
+    transition: ease;
 }
 
 
