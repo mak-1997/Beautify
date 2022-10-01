@@ -299,3 +299,13 @@ app(brands)
 document.querySelector("#alert_btn").addEventListener("click", () => {
     show_alert();
 })
+
+
+//-----------------Navbar Username Display ------------------
+
+let loginDb = JSON.parse(localStorage.getItem("loginAccounts"));
+console.log(loginDb);
+
+let n = loginDb.length-1;
+
+document.querySelector("#username").innerText = "Hello, " + loginDb[n].name;
