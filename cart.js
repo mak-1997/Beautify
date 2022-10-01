@@ -7,18 +7,26 @@ document.querySelector("#footer").innerHTML = footer();
 document.querySelector("#inner").innerHTML = inner();
 document.querySelector("#nav").innerHTML = navbar();
 
-
+document.querySelector("#btn_apply").addEventListener("click",()=>{
+  window.location = "gift.html"
+})
 
 // document.getElementById("items_count").innerText = totalS.length;
 
 const carts = JSON.parse(localStorage.getItem("cart"))
-
+let coupon_applied = JSON.parse(localStorage.getItem("coupon_applied"));
+if(coupon_applied == true){
+  let btn_coupon = document.querySelector("#btn_apply")
+  btn_coupon.disabled = true;
+  console.log("button disabled")
+}
 
 let total = carts.reduce(function (acc, el, i) {
     return acc + Number(el.price);
   }, 0);
 
 document.getElementById("cost").innerText = `₹ ${total}`;
+localStorage.setItem("cart_total",JSON.stringify(total));
 
 document.getElementById("items").innerText = carts.length;
 const cartappend = (carts) => {
@@ -47,6 +55,7 @@ const cartappend = (carts) => {
                 total = carts.reduce(function (acc, el) {
                     return acc + Number(el.price);
                   }, 0);
+                localStorage.setItem("cart_total",JSON.stringify(total));
                 document.getElementById("cost").innerText = `₹ ${total}`;
                 document.getElementById("items").innerText = carts.length;
                 
