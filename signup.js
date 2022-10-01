@@ -1,7 +1,7 @@
 let loginAccounts=JSON.parse(localStorage.getItem("loginAccounts")) || [];
 
 document.getElementById("backToHome").addEventListener("click",function(){
-    window.location.href="https://www.nykaa.com/";
+    window.location = "index.html";
 })
 document.getElementById("backToSign").addEventListener("click",function(){
     let main=document.getElementById("main");
@@ -28,7 +28,7 @@ function checkLoginDetails(phone){
             loginData=e;
             localStorage.setItem("loginData",JSON.stringify(loginData));
             count++;
-            window.location.href="https://www.nykaa.com/";
+            window.location.href="index.html";
         }
     });
     if(count==0){
@@ -48,7 +48,7 @@ function checkLoginDetails(phone){
                 loginAccounts.push(loginData);
                 localStorage.setItem("loginAccounts",JSON.stringify(loginAccounts));
                 localStorage.setItem("loginData",JSON.stringify(loginData));
-                window.location.href="https://www.nykaa.com/";
+                window.location.href="index.html";
             }
         })
     }

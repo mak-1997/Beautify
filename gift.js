@@ -269,7 +269,9 @@ document.querySelector("#btn12").addEventListener("click",()=>{
         }
         else{
             total = total * 0.7;
+            let coupon_applied = true;
             localStorage.setItem("cart_total",JSON.stringify(total));
+            localStorage.setItem("coupon_applied",JSON.stringify(coupon_applied));
             alert(`Hurray! Coupon Applied. Your new cart total is ${total}`);
         }
         open_page();
