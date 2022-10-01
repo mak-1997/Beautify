@@ -227,7 +227,7 @@ const navbar = () => {
         
         <div id="ac">
             <i class="fa-regular fa-user"></i>
-            <h4>Account</h4>
+            <h4 id="username">Account</h4>
         </div>
         <div id="cr">
         <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span id="items_count">0</span></a>
