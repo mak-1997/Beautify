@@ -291,10 +291,31 @@ let open_page = () =>{
 
 //-----------------Navbar Username Display ------------------
 
-let loginDb = JSON.parse(localStorage.getItem("loginAccounts"));
-console.log(loginDb);
+let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
 
-let n = loginDb.length-1;
-
-document.querySelector("#username").innerText = "Hello, " + loginDb[n].name;
+if(isLoggedIn == true){
+    let loginDb = JSON.parse(localStorage.getItem("loginData"));
+  console.log(loginDb);
+  
+ 
+  
+  document.querySelector("#username").innerText = "Hello, " + loginDb.name;
+  document.querySelector("#username").addEventListener("click",()=>{
+    isLoggedIn = false;
+    let cart_items = JSON.parse(localStorage.getItem("cart_total"));
+        cart_items = 0;
+        localStorage.setItem("cart_total",JSON.stringify(cart_items));
+    let coupon_applied = JSON.parse(localStorage.getItem("coupon_applied"));
+    coupon_applied = false;
+    localStorage.setItem("coupon_applied",JSON.stringify(coupon_applied));
+    localStorage.setItem("isLoggedIn",JSON.stringify(isLoggedIn));
+    document.location.reload();
+  })
+}
+else{
+    document.querySelector("#username").addEventListener("click",()=>{
+        
+        window.location = "signup.html";
+    })
+}
 

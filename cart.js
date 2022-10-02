@@ -8,7 +8,14 @@ document.querySelector("#inner").innerHTML = inner();
 document.querySelector("#nav").innerHTML = navbar();
 
 document.querySelector("#btn_apply").addEventListener("click",()=>{
-  window.location = "gift.html"
+  let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+  if(isLoggedIn == true){
+    window.location = "gift.html"
+  }
+  else{
+    alert("You need to login to apply coupon.");
+    window.location = "signup.html";
+  }
 })
 
 // document.getElementById("items_count").innerText = totalS.length;
@@ -80,9 +87,47 @@ document.querySelector("#alert_btn").addEventListener("click", () => {
 
 //-----------------Navbar Username Display ------------------
 
-let loginDb = JSON.parse(localStorage.getItem("loginAccounts"));
-console.log(loginDb);
+let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
 
-let n = loginDb.length-1;
+if(isLoggedIn == true){
+    let loginDb = JSON.parse(localStorage.getItem("loginData"));
+  console.log(loginDb);
+  
+ 
+  
+  document.querySelector("#username").innerText = "Hello, " + loginDb.name;
+  document.querySelector("#username").addEventListener("click",()=>{
+    isLoggedIn = false;
+    let cart_items = JSON.parse(localStorage.getItem("cart"));
+        cart_items.length = 0;
+        localStorage.setItem("cart",JSON.stringify(cart_items));
+        let coupon_applied = JSON.parse(localStorage.getItem("coupon_applied"));
+    coupon_applied = false;
+    localStorage.setItem("coupon_applied",JSON.stringify(coupon_applied));
+    localStorage.setItem("isLoggedIn",JSON.stringify(isLoggedIn));
+    document.location.reload();
+  })
+}
+else{
+    document.querySelector("#username").addEventListener("click",()=>{
+        
+        window.location = "signup.html";
+    })
+}
 
-document.querySelector("#username").innerText = "Hello, " + loginDb[n].name;
+//------------------proceed to payment-------------------------
+
+document.querySelector("#proceed").addEventListener("click",()=>{
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  if(isLoggedIn == true && cart.length != 0){
+    window.location = "payment.html";
+  }
+  else if(isLoggedIn == true && cart.length == 0) {
+    alert("Please purchase some product to proceed.")
+    window.location = "index.html";
+  }
+  else if(isLoggedIn == false){
+    alert("Please login to continue.");
+    window.location = "signup.html"
+  }
+})
