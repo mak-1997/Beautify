@@ -64,3 +64,29 @@ document.getElementById("submitLogin").addEventListener("click",function(){
         alert("Please Enter correct OTP!!");
     }
 })
+
+//----------------------------Login And Signup Event------------------------------------------
+
+document.querySelector("#submitName").addEventListener("click",()=>{
+    let isLoggedIn = true;
+    localStorage.setItem("isLoggedIn",JSON.stringify(isLoggedIn));
+
+    let cart_items = JSON.parse(localStorage.getItem("cart_total"));
+        cart_items = 0;
+        localStorage.setItem("cart_total",JSON.stringify(cart_items));
+    let coupon_applied = JSON.parse(localStorage.getItem("coupon_applied"));
+    coupon_applied = false;
+    localStorage.setItem("coupon_applied",JSON.stringify(coupon_applied));
+})
+
+document.querySelector("#submitLogin").addEventListener("click",()=>{
+    let isLoggedIn = true;
+    localStorage.setItem("isLoggedIn",JSON.stringify(isLoggedIn));
+
+    let cart_items = JSON.parse(localStorage.getItem("cart_total"));
+        cart_items = 0;
+        localStorage.setItem("cart_total",JSON.stringify(cart_items));
+    let coupon_applied = JSON.parse(localStorage.getItem("coupon_applied"));
+    coupon_applied = false;
+    localStorage.setItem("coupon_applied",JSON.stringify(coupon_applied));
+})

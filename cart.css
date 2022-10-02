@@ -100,3 +100,6 @@ a{
 #btn_proceed > button:hover{
     background-color: red;
 }
+#username{
+    cursor: pointer;
+  }

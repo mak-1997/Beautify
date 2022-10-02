@@ -53,3 +53,6 @@ border: none;
 background-color: rgb(47, 175, 218);
 }
 
+#username{
+    cursor: pointer;
+  }

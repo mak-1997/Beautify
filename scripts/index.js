@@ -43,7 +43,7 @@ let start_slide_show = (event,img_arr) =>{
    
     slide_div.append(img2);
     let starts = setInterval(() => {
-        console.log("my",i)
+        // console.log("my",i)
         if(i == img_arr.length){
             i = 0;
         }
@@ -281,11 +281,20 @@ const appendBest = (data) => {
 
         let btn = document.createElement('button');
         btn.innerHTML = 'Add to cart';
+        btn.setAttribute("id","add_to_cart_btn");
         btn.addEventListener("click",function(){
-            carts.push(el)
-            localStorage.setItem("cart",JSON.stringify(carts))
-            totalS = JSON.parse(localStorage.getItem("cart"))||[];
-            document.getElementById("items_count").innerText = totalS.length;
+            let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+
+            if(isLoggedIn == true){
+                carts.push(el)
+                localStorage.setItem("cart",JSON.stringify(carts))
+                totalS = JSON.parse(localStorage.getItem("cart"))||[];
+                document.getElementById("items_count").innerText = totalS.length;
+            }
+            else{
+                alert("You need to login to add items to cart.");
+                window.location = "signup.html";
+            }
         })
 
         div.append(image,title,ratings,price,btn)
@@ -310,9 +319,26 @@ document.querySelector("#alert_btn").addEventListener("click", () => {
 
 //-----------------Navbar Username Display ------------------
 
-let loginDb = JSON.parse(localStorage.getItem("loginAccounts"));
-console.log(loginDb);
+let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
 
-let n = loginDb.length-1;
-
-document.querySelector("#username").innerText = "Hello " + loginDb[n].name;
+if(isLoggedIn == true){
+    let loginDb = JSON.parse(localStorage.getItem("loginData"));
+  console.log(loginDb);
+  
+ 
+  
+  document.querySelector("#username").innerText = "Hello, " + loginDb.name;
+  document.querySelector("#username").addEventListener("click",()=>{
+    isLoggedIn = false;
+     let cart_items = JSON.parse(localStorage.getItem("cart"));
+        cart_items.length = 0;
+        localStorage.setItem("cart",JSON.stringify(cart_items));
+    localStorage.setItem("isLoggedIn",JSON.stringify(isLoggedIn));
+    document.location.reload();
+  })
+}
+else{
+    document.querySelector("#username").addEventListener("click",()=>{
+        window.location = "signup.html";
+    })
+}
