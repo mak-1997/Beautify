@@ -82,11 +82,11 @@ picture.src = hero_arr[j];
 
 div.append(picture)
 j++;
-if(j==7)    j=0;
+if(j==6)    j=0;
 setInterval(function () {
     picture.src = hero_arr[j];
     div.append(picture)
-    if( j == 7) {
+    if( j == 6) {
         j = 0
         
     }
