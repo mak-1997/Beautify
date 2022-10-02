@@ -300,7 +300,7 @@ if(isLoggedIn == true){
  
   
   document.querySelector("#username").innerText = "Hello, " + loginDb.name;
-  document.querySelector("#username").addEventListener("click",()=>{
+  document.querySelector("#username1").addEventListener("click",()=>{
     isLoggedIn = false;
     let cart_items = JSON.parse(localStorage.getItem("cart_total"));
         cart_items = 0;
