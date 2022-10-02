@@ -86,9 +86,10 @@ marquee:hover {
 #ac {
   display: flex;
   align-items: center;
-  width: 10%;
+  width: auto;
   justify-content: space-around;
-  margin-left: 250px;
+  margin-left: 170px;
+  
 }
 .fa-bag-shopping {
   font-size: 18px;
@@ -99,7 +100,11 @@ marquee:hover {
   color: #fc2779;
 }
 #cr {
-  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: auto;
+  margin-left: 10px;
 }
 #logo {
   display: flex;
@@ -107,7 +112,8 @@ marquee:hover {
   width: 10%;
 }
 #logo > a > img {
-  width: 65%;
+  display: block;
+  width: 55%;
 }
 
 nav{
@@ -115,6 +121,7 @@ nav{
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: start;
 }
 nav .wrapper {
   position: relative;
@@ -129,6 +136,15 @@ nav .wrapper {
 .wrapper .nav-links {
   display: inline-flex;
 }
+
+.nav-links {
+  width: 50%;
+}
+
+#username1 {
+  margin-left: 10px;
+}
+
 .nav-links li {
   list-style: none;
 }
@@ -161,7 +177,7 @@ nav .wrapper {
 .nav-links li:hover .mega-box {
   transition: all 0.4s ease;
   top: 70px;
-  opacity: 01;
+  opacity: 1;
   visibility: visible;
   background-color: white;
 }
@@ -179,7 +195,7 @@ nav .wrapper {
   color: #1f1f1f;
   padding: 20px 20px;
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: space-evenly;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   z-index: 999;
