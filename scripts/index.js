@@ -13,9 +13,6 @@ let totalS = JSON.parse(localStorage.getItem("cart"))||[];
 document.getElementById("items_count").innerText = totalS.length;
 
    
-
-
-
 let img_arr = [
     {"url" : "https://images-static.nykaa.com/uploads/a261ed0b-bb88-404e-b423-b40072fb814c.jpg?tr=w-600,cm-pad_resize" },
     {"url" : "https://images-static.nykaa.com/uploads/1ca076b5-bb28-42e1-8c90-518afdb5d385.jpg?tr=w-1200,cm-pad_resize"},
@@ -26,6 +23,7 @@ let img_arr = [
     {"url" : "https://images-static.nykaa.com/uploads/0bd0130b-3270-4b06-9a5e-05a8bef3e139.jpg?tr=w-1200,cm-pad_resize"}           
 ];
 console.log(img_arr[0].url)
+
 let start_slide_show = (event,img_arr) =>{
     event.preventDefault();
     let slide_div = document.querySelector("#sliding_guide");
@@ -90,17 +88,15 @@ setInterval(function () {
     div.append(picture)
     if( j == 7) {
         j = 0
-        j++;
+        
     }
+    j++;
     // console.log(j)
 },2000)
 
 }
 
 herosliding();
-
-
-
 
 function herosliding2 () {
 
@@ -123,8 +119,8 @@ function herosliding2 () {
         }
         picture2.src = hero2_arr[i];
         div2.append(picture2)
-    
-    },1500)
+        i++;
+    },2000)
     
     }
     
@@ -152,6 +148,7 @@ function herosliding2 () {
             }
             picture3.src = hero3_arr[i];
             div3.append(picture3)
+            i++;
         
         },1000)
         
