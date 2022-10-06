@@ -1,9 +1,9 @@
 # groovy-airplane-6414
-Unit - 3 Construct Week project
+**Unit- 3 Construct Week project**
 
-Project :- Create a clone of Nykaa website.
+**Project:-** Create a clone of Nykaa website.
 
-Team Description-
+**Team Description-**
 Mayank Singh, 
 Param,
 Bhavnesh Arora,
