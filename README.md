@@ -9,3 +9,6 @@ Param,
 Bhavnesh Arora,
 Sumit Badri,
 Rakesh Pasupathy
+
+**Deployed link-**
+https://sensational-torrone-ff2b20.netlify.app/
