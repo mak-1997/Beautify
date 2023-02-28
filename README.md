@@ -10,5 +10,32 @@ Bhavnesh Arora,
 Sumit Badri,
 Rakesh Pasupathy
 
-**Deployed link-**
-https://sensational-torrone-ff2b20.netlify.app/
+### HomePage
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1FYAp1YkttvzbgKBJteeptKhcp_AxvgOc"></center>
+
+### Mens Page
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1Ww8yTOR-TxmhwKYJvxIpo7uM_r5cSsee"></center>
+
+### Facewash Page
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1zSFRrldXNcPrIBghZE4UHTv5nqO8XNQM"></center>
+
+### Cart Page
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1kq5ANYe7dVayf17XyGqRPWaA8-0zXTKT"></center>
+
+### Gift Coupons Page
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1kq5ANYe7dVayf17XyGqRPWaA8-0zXTKT"></center>
+
+### Checkout Page
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1JBeAwLxpo_sBnPD0nc3X90MSZFMONY4g"></center>
+
+# Features
+ - `Login`
+ - `Sign Up`
+ - `Sorting anf Filtering on Facewash Page`
+ - `Cart`
+ - `Gift Coupons` 
+ - `Checkout`
+ 
+
+### :chipmunk: Please feel free for any suggestions, questions or contributions.
+### Thank you 
