@@ -1,7 +1,7 @@
 # groovy-airplane-6414
 **Unit- 3 Construct Week project**
 
-**Project:-** Create a clone of Nykaa website.
+**Project:-** Nykaa.com is an ecommerce website inspired from original nykaa.com where users can shop different category of items. In this website, any user can login, signup, add products, filter products and purchase them by applying coupons.
 
 **Team Description-**
 Mayank Singh, 
@@ -14,7 +14,7 @@ Rakesh Pasupathy
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1FYAp1YkttvzbgKBJteeptKhcp_AxvgOc"></center>
 
 ### Mens Page
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1Ww8yTOR-TxmhwKYJvxIpo7uM_r5cSsee"></center>
+<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1c25oiu_r-kUgGebS0jhIEiUjwTlcszVk"></center>
 
 ### Facewash Page
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1zSFRrldXNcPrIBghZE4UHTv5nqO8XNQM"></center>
