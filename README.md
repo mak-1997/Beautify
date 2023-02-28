@@ -10,23 +10,24 @@ Bhavnesh Arora,
 Sumit Badri,
 Rakesh Pasupathy
 
+
 ## HomePage
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1FYAp1YkttvzbgKBJteeptKhcp_AxvgOc"></center>
+![Nyka_Home_Page](https://user-images.githubusercontent.com/110032728/221774602-c312c8de-a642-4c62-86d4-430e3fe88dec.png)
 
 ## Mens Page
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1c25oiu_r-kUgGebS0jhIEiUjwTlcszVk"></center>
+![Nyka_Menspage](https://user-images.githubusercontent.com/110032728/221774754-cfe3d888-dbbc-42f8-b094-25f2749c35e8.png)
 
 ## Facewash Page
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1zSFRrldXNcPrIBghZE4UHTv5nqO8XNQM"></center>
+![Nyka_Facewash](https://user-images.githubusercontent.com/110032728/221774867-b8d7d03a-6bd3-4b16-aba2-55362f0de217.png)
 
 ## Cart Page
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1kq5ANYe7dVayf17XyGqRPWaA8-0zXTKT"></center>
+![Nyka_Cart](https://user-images.githubusercontent.com/110032728/221773831-e890b812-6ddc-4ee2-9727-3e19965c3c8b.png)
 
 ## Gift Coupons Page
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1kq5ANYe7dVayf17XyGqRPWaA8-0zXTKT"></center>
+![Nyka_Coupons](https://user-images.githubusercontent.com/110032728/221774249-a9cc2430-9471-47ed-a922-3a093295e82d.png)
 
 ## Checkout Page
-<center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1JBeAwLxpo_sBnPD0nc3X90MSZFMONY4g"></center>
+![Nyka_Payment](https://user-images.githubusercontent.com/110032728/221774501-7bf7813c-d44f-4e4a-800c-fed28b8d1730.png)
 
 # Features
  - `Login`
