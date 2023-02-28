@@ -10,22 +10,22 @@ Bhavnesh Arora,
 Sumit Badri,
 Rakesh Pasupathy
 
-### HomePage
+## HomePage
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1FYAp1YkttvzbgKBJteeptKhcp_AxvgOc"></center>
 
-### Mens Page
+## Mens Page
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1c25oiu_r-kUgGebS0jhIEiUjwTlcszVk"></center>
 
-### Facewash Page
+## Facewash Page
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1zSFRrldXNcPrIBghZE4UHTv5nqO8XNQM"></center>
 
-### Cart Page
+## Cart Page
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1kq5ANYe7dVayf17XyGqRPWaA8-0zXTKT"></center>
 
-### Gift Coupons Page
+## Gift Coupons Page
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1kq5ANYe7dVayf17XyGqRPWaA8-0zXTKT"></center>
 
-### Checkout Page
+## Checkout Page
 <center><img width="1000px" src="https://drive.google.com/uc?export=view&id=1JBeAwLxpo_sBnPD0nc3X90MSZFMONY4g"></center>
 
 # Features
