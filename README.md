@@ -1,7 +1,7 @@
-# Nykaa
+# Beautify
 **Unit- 3 Construct Week project**
 
-**Project:-** Nykaa.com is an ecommerce website inspired from original nykaa.com where users can shop different category of items. In this website, any user can login, signup, add products, filter products and purchase them by applying coupons.
+**Project:-** Beautify is an ecommerce website inspired from original nykaa.com where users can shop different category of items. In this website, any user can login, signup, add products, filter products and purchase them by applying coupons.
 
 **Team Description-**
 Mayank Singh, 
