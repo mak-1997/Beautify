@@ -32,7 +32,7 @@ const navbar = () => {
         <div class="wrapper">
             <div id="logo">
                 <a href="index.html">
-                    <img src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png" alt="nykaa-logo">
+                    <img src="../img/logo.svg" alt="nykaa-logo">
                 </a>
             </div>
         <input type="radio" name="slider" id="menu-btn">
@@ -229,7 +229,7 @@ const navbar = () => {
             <h4 id="username">Account</h4>
         </div>
         <div id="cr">
-        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span id="items_count">0</span></a>
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span id="items_count">0</span></a>
         </div>
         <h4 id="username1">Logout</h4>
     </nav>`
